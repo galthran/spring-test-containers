@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/001-create-table-person.yml
+  - include:
+      file: db/changelog/002-load-data-to-person.yml
+

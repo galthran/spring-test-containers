@@ -1,5 +1,15 @@
+server:
+  port: 9090
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/test
     username: sa
     password: sa
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  liquibase:
+    change-log: db/changelog/db.changelog-master.yml
