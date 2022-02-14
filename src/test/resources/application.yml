@@ -8,9 +8,17 @@ spring:
     username: sa
     password: sa
 
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      group-id: test
+
   jpa:
     hibernate:
       ddl-auto: validate
 
   liquibase:
     change-log: db/changelog/db.changelog-master-test.yml
+
+test:
+  topic: embedded-test-topic

@@ -26,7 +26,7 @@ class ControllerTestIT {
     private MockMvc mockMvc;
 
     @ClassRule
-    public static PostgreSQLContainer postgreSQLContainer = PostgresqlContainer.getInstance();
+    public static PostgreSQLContainer postgreSQLContainer = PostgresqlContainerWrapper.getInstance();
 
     @Test
     void getPeople() throws Exception {

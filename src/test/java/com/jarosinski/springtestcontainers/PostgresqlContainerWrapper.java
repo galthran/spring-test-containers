@@ -2,17 +2,17 @@ package com.jarosinski.springtestcontainers;
 
 import org.testcontainers.containers.PostgreSQLContainer;
 
-public class PostgresqlContainer extends PostgreSQLContainer<PostgresqlContainer> {
+public class PostgresqlContainerWrapper extends PostgreSQLContainer<PostgresqlContainerWrapper> {
     private static final String IMAGE_VERSION = "postgres:11.1";
-    private static PostgresqlContainer container;
+    private static PostgresqlContainerWrapper container;
 
-    private PostgresqlContainer() {
+    private PostgresqlContainerWrapper() {
         super(IMAGE_VERSION);
     }
 
-    public static PostgresqlContainer getInstance() {
+    public static PostgresqlContainerWrapper getInstance() {
         if (container == null) {
-            container = new PostgresqlContainer();
+            container = new PostgresqlContainerWrapper();
         }
         return container;
     }
